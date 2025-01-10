@@ -67,7 +67,7 @@ class UserInfo(CommonModel):
         query = {
             "username": {
                 "$regex": username,
-                "$options": "$i"
+                "$options": "i"
             }
         }
         doc = self.table.find_one(query, {"username": 1})
